@@ -1,0 +1,63 @@
+.customers {
+  background: rgba(239, 242, 247, 0.6);
+  .container {
+    max-width: 93vw;
+  }
+  .swiper-slide {
+    // width: 400px !important;
+    @media screen and (max-width: 991.98px) {
+      height: auto;
+    }
+  }
+  .swiper-btn {
+    cursor: pointer;
+    &:focus-visible {
+      outline: none;
+      background-color: transparent;
+    }
+    &--prev,
+    &--next {
+      position: relative;
+      width: 65px;
+      height: 65px;
+      border-radius: 100%;
+      background-color: rgba(110, 0, 255, 0.1);
+      transition: all 0.5s ease;
+      &::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-top: 4px solid #6e00ff;
+        border-left: 4px solid #6e00ff;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      &::after {
+        content: '';
+        width: 22px;
+        height: 4px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: #6e00ff;
+        transform: translate(-40%, -50%);
+      }
+      &:hover {
+        background-color: #6e00ff;
+        &::before {
+          border-top-color: rgba(255, 255, 255, 0.6);
+          border-left-color: rgba(255, 255, 255, 0.6);
+        }
+        &::after {
+          background-color: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+
+    &--next {
+      transform: rotate(-180deg);
+    }
+  }
+}

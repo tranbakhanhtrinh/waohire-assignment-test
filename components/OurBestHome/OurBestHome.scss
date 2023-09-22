@@ -1,0 +1,71 @@
+@use '../../styles/mixin' as mix;
+.our-best-home {
+  .location {
+    @media screen and (max-width: 400px) {
+      top: 10px;
+      left: 10px;
+      font-size: 14px;
+    }
+  }
+  .price {
+    border-radius: 3.058px;
+    background: rgba(0, 0, 0, 0.19);
+    backdrop-filter: blur(28.53845977783203px);
+    padding: 0.5rem 1rem;
+    @media screen and (max-width: 400px) {
+      padding: 0.5rem;
+      font-size: 14px;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  .other-price {
+    border-radius: 3.058px;
+    background: rgba(0, 0, 0, 0.19);
+    backdrop-filter: blur(28.53845977783203px);
+    padding: 0.5rem 1rem;
+    @media screen and (max-width: 400px) {
+      padding: 0.5rem;
+      top: 10px;
+      right: 10px;
+      font-size: 14px;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    bottom: 2rem;
+    top: auto;
+    width: 20px;
+    height: 20px;
+    &:after {
+      content: none;
+    }
+    @media screen and (min-width: 992px) {
+      bottom: 3rem;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .swiper-button-prev {
+    @include mix.bg('/assets/arrow-left.svg', center, cover, no-repeat);
+    left: 45%;
+    @media screen and (max-width: 400px) {
+      left: 3%;
+    }
+    @media screen and (min-width: 992px) {
+      left: 45%;
+    }
+  }
+  .swiper-button-next {
+    @include mix.bg('/assets/arrow-right.svg', center, cover, no-repeat);
+    right: 45%;
+    @media screen and (max-width: 400px) {
+      left: 10%;
+      right: auto;
+    }
+    @media screen and (min-width: 992px) {
+      right: 45%;
+    }
+  }
+}

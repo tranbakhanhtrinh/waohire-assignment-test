@@ -1,0 +1,47 @@
+@use '/styles/mixin' as mix;
+@import '/styles/keyframe';
+.about {
+  h1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    font-size: 1.8rem;
+    z-index: 3;
+    @include mix.bg('/assets/bg_menu.png', center center, cover, no-repeat);
+    @media screen and (min-width: 321px) and (max-width: 767.98px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      font-size: 9vw;
+    }
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5vw;
+      line-height: 113.023%;
+      background-image: none;
+    }
+    @media screen and (min-width: 992px) {
+      top: 18%;
+    }
+    @media screen and (min-width: 1200px) {
+      top: 16%;
+    }
+  }
+  .facility-wrapper {
+    --speed: 20s;
+    --gap: 3rem;
+    gap: var(--gap);
+    display: flex;
+  }
+  .facility-container {
+    gap: var(--gap);
+    min-width: 100%;
+    animation: slide var(--speed) linear infinite;
+    flex-shrink: 0;
+  }
+}

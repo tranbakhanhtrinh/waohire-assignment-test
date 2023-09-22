@@ -1,0 +1,15 @@
+.solutions {
+  .house {
+    position: relative;
+    img {
+      &:last-of-type {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    &--number {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
