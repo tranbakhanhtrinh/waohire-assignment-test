@@ -8,7 +8,7 @@ export const facilities = [
     alt: 'Front Beach 3 Bedrooms',
   },
   {
-    src: '/assets/facility3.svg',
+    src: '/assets/facility1.svg',
     alt: 'Jacuzzi 3 Bathrooms',
   },
   {
