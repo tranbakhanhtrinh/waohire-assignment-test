@@ -19,6 +19,8 @@ const About = () => {
           {facilities.map(({ src, alt }) => (
             <Facilities key={alt} src={src} alt={alt} />
           ))}
+        </div>
+        <div className='facility-container flex items-center'>
           {facilities.map(({ src, alt }) => (
             <Facilities key={src + alt} src={src} alt={alt} />
           ))}

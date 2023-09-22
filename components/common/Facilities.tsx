@@ -11,7 +11,8 @@ type Props = {
 const Facilities = ({ src, alt, width, height }: Props) => {
   return (
     <div className='flex items-center gap-3 py-4'>
-      <Image src={src} alt={alt} width={30} height={30} style={{
+      <Image src={src} alt={alt} width={30} height={30} priority style={{
+        color: '#6E00FF',
         width: width || 30,
         height: height || 30
       }} />
