@@ -1,19 +1,34 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import './Header.scss'
 import Link from 'next/link'
 import { navItems } from '@/constants/navItems'
 
 const Header = () => {
   const [toggle, setToggle] = useState<boolean>(false)
+  const buttonRef = useRef<HTMLButtonElement>(null)
   const [activeText, setActiveText] = useState<string>('active1')
   const toggleMenu = (e: any) => {
     e.preventDefault()
     setToggle(!toggle)
   }
+  useEffect(() => {
+    function handleClickOutside (event: any) {
+      if (buttonRef.current && !buttonRef.current.contains(event.target)) {
+        setToggle(false)
+      }
+    }
+    // Bind the event listener
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [buttonRef])
+
   return (
     <header className='mx-auto p-2.5 lg:px-10'>
-      <button className={`burger-btn block sm:hidden ${toggle ? 'change' : ''}`} onClick={toggleMenu}>
+      <button ref={buttonRef} className={`burger-btn block sm:hidden ${toggle ? 'change' : ''}`} onClick={toggleMenu}>
         <div className="bar1"></div>
         <div className="bar2"></div>
         <div className="bar3"></div>
