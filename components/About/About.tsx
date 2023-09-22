@@ -15,12 +15,12 @@ const About = () => {
         <Image src='/assets/bg_about.png' alt='About' className='w-full' width={1841} height={894} priority />
       </picture>
       <div className='overflow-hidden facility-wrapper border-b-[0.5px] border-t-[0.5px] border-[#A9A7A7] border-solid'>
-        <div className='facility-container flex items-center'>
+        <div className='facility-container  items-center'>
           {facilities.map(({ src, alt }) => (
             <Facilities key={alt} src={src} alt={alt} />
           ))}
         </div>
-        <div className='facility-container flex items-center'>
+        <div className='facility-container  items-center'>
           {facilities.map(({ src, alt }) => (
             <Facilities key={src + alt} src={src} alt={alt} />
           ))}
