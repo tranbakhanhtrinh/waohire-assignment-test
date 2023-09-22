@@ -27,7 +27,7 @@ const OurBestHome = () => {
             {bestHomes.map(({ imgUrl, location, price }, i) => (
               <SwiperSlide key={`${price + i}`}>
                 <div className="relative">
-                  <Image src={imgUrl} alt={location} width={100} height={100} className='w-full mb-4' />
+                  <Image src={imgUrl} alt={location} width={100} height={100} priority className='w-full mb-4' />
                   <p className='location font-synonym font-semibold text-white lg:text-[1.6rem] absolute bottom-4 lg:bottom-8 left-4 lg:left-8'>{location}</p>
                   <div className='price absolute bottom-[0.5rem] lg:bottom-[1.5rem] right-4 lg:right-8'>
                     <p className='font-synonym font-semibold text-white lg:text-[1.4rem] '>{price}</p>
