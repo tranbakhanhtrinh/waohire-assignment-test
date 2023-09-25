@@ -14,9 +14,9 @@ const Footer = () => {
               and assist you in identifying properties.
             </p>
             <div className="flex items-center gap-5 mb-4">
-              <Image src='/assets/instagram.svg' alt='Instagram' width={19} height={19} />
-              <Image src='/assets/facebook.svg' alt='Facebook' width={19} height={19} />
-              <Image src='/assets/youtube.svg' alt='Facebook' width={24} height={19} />
+              <Image src='/assets/instagram.svg' alt='Instagram' width={19} height={19} style={{ width: 19, height: 19 }} />
+              <Image src='/assets/facebook.svg' alt='Facebook' width={19} height={19} style={{ width: 19, height: 19 }} />
+              <Image src='/assets/youtube.svg' alt='Facebook' width={24} height={19} style={{ width: 24, height: 19 }} />
             </div>
           </div>
           <div className='navigation-ft block sm:flex justify-between lg:gap-16'>
